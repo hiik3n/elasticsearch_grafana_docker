@@ -1,8 +1,10 @@
 # elasticsearch_grafana_docker
 use grafana with elasticsearch to visualize data
 
-* elasticsearch basic: 	index + type + doc
-			api: PUT POST GET
+* elasticsearch basic:	
+		- index + type + doc
+
+		- api: PUT POST GET
 			
 * tools: postman to use es api
 
