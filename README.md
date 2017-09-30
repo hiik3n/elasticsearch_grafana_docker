@@ -16,14 +16,16 @@ use grafana with elasticsearch to visualize data
 	* [x] Map data storage in local
 	
 	docker run -p 9200:9200 -v ./data:/usr/share/elasticsearch/data --name=elasticsearch myelasticsearch
+	
+	curl localhost:9200
+	curl localhost:9200/index/type -d '{"msg":1}'
 
 * [ ] Tool to import/index data to es
-	
-	docker run -p 9200:9200 -v /Users/lamdo/Documents/myProjs/docker/elasticsearch_grafana_docker/data:/usr/share/elasticsearch/data --name=elasticsearch myelasticsearch
-
 
 
 ## Notes
 https://www.webcodegeeks.com/devops/docker-elasticsearch-tutorial/
 
 https://github.com/deviantony/docker-elk
+
+https://stackoverflow.com/questions/8498371/curl-get-and-x-get
