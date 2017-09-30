@@ -18,7 +18,9 @@ use grafana with elasticsearch to visualize data
 	docker run -p 9200:9200 -v ./data:/usr/share/elasticsearch/data --name=elasticsearch myelasticsearch
 	
 	curl localhost:9200
+	
 	curl localhost:9200/index/type -d '{"msg":1}'
+	
 	curl localhost:9200/_search?pretty=true
 
 * [x] Tool to import/index data to es
