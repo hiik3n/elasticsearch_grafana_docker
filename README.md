@@ -14,6 +14,7 @@ use grafana with elasticsearch to visualize data
 * [x] Setup elasticsearch docker container
 	* [x] Map port from docker container
 	* [x] Map data storage in local
+* [ ] Tool to import/index data to es
 	
 	docker run -p 9200:9200 -v /Users/lamdo/Documents/myProjs/docker/elasticsearch_grafana_docker/data:/usr/share/elasticsearch/data --name=elasticsearch myelasticsearch
 
