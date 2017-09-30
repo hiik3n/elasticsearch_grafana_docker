@@ -19,8 +19,11 @@ use grafana with elasticsearch to visualize data
 	
 	curl localhost:9200
 	curl localhost:9200/index/type -d '{"msg":1}'
+	curl localhost:9200/_search?pretty=true
 
-* [ ] Tool to import/index data to es
+* [x] Tool to import/index data to es
+
+* [ ] Setup Grafana for visualize data
 
 
 ## Notes
