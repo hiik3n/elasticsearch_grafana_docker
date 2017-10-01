@@ -23,9 +23,17 @@ use grafana with elasticsearch to visualize data
 	
 	curl localhost:9200/_search?pretty=true
 
+	localhost:9200/_cat/indices
+
+	curl localhost:9200/_mapping?pretty=true
+
 * [x] Tool to import/index data to es
 
 * [ ] Setup Grafana for visualize data
+	
+		elastic-changeme
+		
+		docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
 
 ## Notes
@@ -34,3 +42,7 @@ https://www.webcodegeeks.com/devops/docker-elasticsearch-tutorial/
 https://github.com/deviantony/docker-elk
 
 https://stackoverflow.com/questions/8498371/curl-get-and-x-get
+
+https://blog.codeship.com/orchestrate-containers-for-development-with-docker-compose/
+
+http://docs.grafana.org/features/datasources/elasticsearch/
