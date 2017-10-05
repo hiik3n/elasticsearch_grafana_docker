@@ -77,7 +77,9 @@ use grafana with elasticsearch to visualize data
 	
 	Then by: timestamp
 	
-	Dashboard Template: Query: {"find": "terms", "field": "devide_id.keyword"}
+	Dashboard Template: Query: 	{"find": "terms", "field": "devide_id.keyword"}
+	
+					{"find": "terms", "field": "sensor_type", "query": "devide_id:$device_id"}
 
 ## Notes
 https://www.webcodegeeks.com/devops/docker-elasticsearch-tutorial/
