@@ -67,19 +67,22 @@ use grafana with elasticsearch to visualize data
 		     }
 		 } 
 	
-	Query: "devide_id.keyword:$device_id && data_type:$data_type && sensor_type:$sensor_type"
+	Query: "devide_id.keyword:$device_id && data_type:$data_type && sensor_type:$sensor_type" (w/o "")
 	
 	Metric: Avarage > data
 	
-	Group by: devide_id
+	Group by: devide_id.keyword
 	
-	Then by: sensor_id
+	Then by: sensor_id (SHT, DHT)
+	
+	Then by: sensor_type (Temp, Humi)
 	
 	Then by: timestamp
 	
 	Dashboard Template: Query: 	{"find": "terms", "field": "devide_id.keyword"}
 	
-					{"find": "terms", "field": "sensor_type", "query": "devide_id:$device_id"}
+					{"find": "terms", "field": "sensor_id", "query": "devide_id:$device_id"}
+					{"find": "terms", "field": "sensor_type", "query": "sensor_id:$sensor_id && devide_id:$device_id"}
 
 ## Notes
 https://www.webcodegeeks.com/devops/docker-elasticsearch-tutorial/
